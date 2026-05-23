@@ -1,0 +1,131 @@
+class Livro():
+    def __init__(self, nome, autor, ano):
+        self.nome = nome
+        self.autor = autor 
+        self.ano = ano
+        self.emprestado = False
+
+    def emprestimo(self):
+        if not self.emprestado:
+            self.emprestado = True
+            return ('livro pego')
+    def devolver(self):
+        if self.emprestado:
+            self.emprestado = False
+            return ('livro devolvido')
+        
+    def __str__(self):
+        return f'{self.nome, self}{self.autor}{self.ano}'
+
+nome, autor, ano = input('nome do livro: '), input(" autor do livro:"), input('ano do livro: ')
+liv1 = Livro(nome, autor, ano)
+liv1.emprestimo
+
+print(liv1)
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+class Produto:
+    def __init__(self, nome, preco, quantidade):
+        self._nome = nome
+        self._preco = preco
+        self._quantidade = quantidade
+
+    @property
+    def nome(self):
+        return self._nome
+
+    @property
+    def preco(self):
+        return self._preco
+
+    @property
+    def quantidade(self):
+        return self._quantidade
+
+    def desconto(self, percentual):
+        descont = self._preco * percentual
+        novo = self.preco - descont
+        if self._preco >= 0:
+            self._preco = novo 
+
+p = Produto('hd', 1700, 1)
+p.desconto(100)
+print(p)
+print(p.nome, p.preco )
+
+
+------------------------------------------------------------------------------------------------------------
+
+
+
+class Aluno:
+    def __init__(self, nome, matricula):     
+        self.nome = nome 
+        self. matricula = matricula
+        self.__notas = []
+
+
+    def AddNota(self):
+        for i in range(5):
+            nota = float(input("Adicione a nota: "))
+            self.__notas.append(nota)
+    
+    def teste(self):
+        return self.__notas
+    
+    def calculo(self):
+        soma = sum(self.__notas)
+        self.__notas = soma/5
+
+    def exibir (self):
+        print(f'{self.nome} tirou {self.__notas} pontos na média')
+        
+        if self.__notas >=7:
+            print('Aprovado')
+        elif self.__notas >= 5:
+            print('recuperação')
+        else:
+            print( 'reprovado')
+a = Aluno('José', 2746896)
+
+a.AddNota()
+a.calculo()
+a.exibir()
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------
+
+class Calculadora:
+
+    @staticmethod
+    def soma(a,b):
+        return a + b 
+    
+    @staticmethod
+    def subtrai(a,b):
+        return a-b 
+    @staticmethod
+    def multiplica(a,b):
+        return a*b 
+    @staticmethod 
+    def divisao(a,b):
+        return a/b 
+    
+
+c = Calculadora()
+
+print(c.soma(10, 15))
+print(c.subtrai(10, 15))
+print(c.divisao(10, 15))
+print(c.multiplica(10, 15))
