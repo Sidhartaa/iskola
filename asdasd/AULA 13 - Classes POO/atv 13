@@ -1,0 +1,71 @@
+# class Pessoa:
+#     def __init__(self, nome, idade):
+#         self.nome = nome 
+#         self.idade = idade 
+    
+#     def apresentar(self):
+#         print(f'ola, sou o {self.nome} e tenho {self.idade}')
+
+
+# pessoa1 = Pessoa('ronaldo', 67)
+# pessoa2 = Pessoa('el pepe', 69)
+
+# pessoa1.apresentar()
+# pessoa2.apresentar()
+
+# class Retangulo:
+#     def __init__(self, largura, altura):
+#         self.largura = largura
+#         self.altura = altura
+
+#     def area(self):
+#         print(f"a area é de {self.largura * self.altura}")
+
+#     def perimetro(self):
+#         print(f'o perimetro é de {self.altura + self.largura}')
+
+# retangulo = Retangulo(5,3)
+
+# retangulo.area()
+
+# retangulo.perimetro()
+
+# class ContaBancaria():
+#     def __init__ (self,titular, saldo):
+#         self.titular = titular
+#         self.saldo = saldo
+
+
+#     def despos(self):
+#         deposito = int(input("Qual o valor que gostaria de depositar?: "))    
+#         self.saldo = self.saldo + deposito
+    
+#     def saque(self):
+#         sake = int(input("quanto você quer sacar?: "))
+#         self.saldo = self.saldo - sake
+    
+#     def exibir(self):
+#         print(f' seu saldo {self.saldo}')
+
+# banco = ContaBancaria('a',0)
+
+# while True:
+#     print(f"\nOlá, selecione uma opção a seguir" \
+#         "\n1° depostiar" \
+#         "\n2° sacar" \
+#         "\n3°exibir saldo" \
+#         "\n4°sair" \
+#         ":", end='\n')
+#     escolha = int(input(''))
+    
+#     if escolha == 1:
+#         banco.despos()
+#     elif escolha == 2:
+#         banco.saque()
+#     elif escolha == 3: 
+#         banco.exibir()
+#     elif escolha == 4:
+#         print('até a proxima')
+#         break
+#     else:
+#         continue
