@@ -1,0 +1,31 @@
+import streamlit as st 
+
+# framework -  data science
+# interface 
+# 1 pip install streamlit
+
+
+# import streamlit as st
+
+
+# carregar  -  streamli run mome.py
+
+
+import streamlit as st 
+
+
+
+
+class Portifolio:
+    def __init__(self):
+        nome  =  st.title('Nome')
+        link =  st.error('https://github.com/Sidhartaa')
+        whats = st.write('84584848')
+        email =  st.warning('sidhartamartinsgarcia@gmail.com')
+        endereco = st.success('x')
+        image = st.image('')
+        audio = st.audio('')
+        button =  st.button('')
+
+
+
